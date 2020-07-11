@@ -4,7 +4,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 import pl.camp.it.model.Customer;
+
+import java.util.List;
 
 public class App {
     public static SessionFactory sessionFactory =
@@ -33,11 +36,9 @@ public class App {
 
         saveCustomerToDatabase(customer1); // podalismy referencje do tej metody i ten obiekt zostal od razu zmieniony w bazie danych
 
-        System.out.println(customer1);
+        System.out.println(getCustomerById(1));
 
-        deleteCustomer(customer1);
-
-        System.out.println(customer1);
+        System.out.println(getAllCustomers());
 
     }
 
@@ -71,5 +72,21 @@ public class App {
         } finally {
             session.close();
         }
+    }
+
+    public static Customer getCustomerById(int id) {
+        Session session = sessionFactory.openSession();
+        Query<Customer> query = session.createQuery("FROM pl.camp.it.model.Customer WHERE id = " + id); // HQL - to samo co SQL tylko uproszczony od hibernate
+        // piszemy obiektowo więc ściezke klasy a nie nazwe tabelki z bazy jak w SQL, poslugujemy sie wszytskim z Javy
+        // Customer customer = (Customer) query.getSingleResult();
+        // return customer; mozna rzutowac na customera
+        Customer customer = query.getSingleResult(); // teraz nie zwroci mi objecta wiec nie musimy rzutowac tylko od razu zwroci mi customera
+        return customer; // Query jest teraz typowane na customera
+    }
+
+    public static List<Customer> getAllCustomers() {
+        Session session = sessionFactory.openSession();
+        Query<Customer> query = session.createQuery("FROM pl.camp.it.model.Customer");
+        return query.getResultList(); // mozna zrobic jak wyzej albo od razy zwrocic bez zmiennej
     }
 }
