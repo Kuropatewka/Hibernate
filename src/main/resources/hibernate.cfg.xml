@@ -25,12 +25,16 @@
         <property name = "hibernate.connection.password">
         </property>
 
-        <property name="show_sql>">true</property>
-        <property name="hbm2ddl.auto">create</property> <!-- sprawdza czy jest taka tabela i jelsi jest to ją automatycznie uzupełni
+        <property name="show_sql">true</property>
+        <property name="hbm2ddl.auto">update</property> <!-- sprawdza czy jest taka tabela i jelsi jest to ją automatycznie uzupełni
          słówko update jesli cos sie w kodzie zmienilo aktualizuje a nie usuwa, a create za kazdym razem tworzy na nowo a stara tabele usuwa,
          słowko none nic z tym nie rób-->
 
         <mapping class="pl.camp.it.model.Customer"/> <!-- Relacja do tej klasy, tam masz jakies adnotacje i zajarzysz ze trzeba zrobic tabelke z tej klasy -->
+        <mapping class="pl.camp.it.model.Adress"/>
+        <!--mapping resource="Adress.hbm.xml"/ jesli tworzymy przez plik konfiguracyjny-->
+        <mapping class="pl.camp.it.model.Invoice"/>
+        <mapping class="pl.camp.it.model.Product"/>
 
         <!-- ORM - Object Relation Mapping - Hibernate jest biblioteką która oferuje ORM, jak będziemy z bazy danych wyciągać coś to
         chcemy żeby od razu wyciąnąc liste bez żadnego ResultSeta :D -->

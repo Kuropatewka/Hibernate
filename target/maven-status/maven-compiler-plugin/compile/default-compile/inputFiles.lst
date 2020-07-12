@@ -1,2 +1,16 @@
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/services/IRandomDataService.java
 /home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/App.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/services/CustomerService.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/model/Product.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/dao/IProductDAO.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/services/ICustomerService.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/dao/CustomerDAO.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/App2.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/services/RandomDataService.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/services/FakerDataService.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/dao/ProductDAO.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/model/Adress.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/model/Invoice.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/dao/ICustomerDAO.java
 /home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/model/Customer.java
+/home/piotr/IdeaProjects/hibernate/src/main/java/pl/camp/it/gui/GUI.java
